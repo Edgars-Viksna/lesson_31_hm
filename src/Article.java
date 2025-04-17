@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Article {
 
     private String title;
@@ -36,5 +38,6 @@ public class Article {
                 ",     rating " + rating +
                 ",     balance " + balance;
     }
+
 
 }
