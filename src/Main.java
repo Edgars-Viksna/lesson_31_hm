@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -15,11 +16,27 @@ public class Main {
         printList(articleList);
 
 
+
     }
+//--------------------------------- Methods ----------------------------------
 
     public static <T> void printList(List<T> list) {
         for (T item : list) {
             System.out.println(item);
         }
     }
+
+    Comparator<Article> comparatorByPrice = new Comparator<Article>() {
+        @Override
+        public int compare(Article o1, Article o2) {
+            return Double.compare(o1.getPrice(), o2.getPrice());
+        }
+    };
+
+    //public static void sort = (List<Article> list){
+
+
+
+
+
 }
