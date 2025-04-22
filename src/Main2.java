@@ -12,7 +12,7 @@ public class Main2 {
         articleList2.add(new Article("MacBook ProMax", 3499.99, 4.8, 8));
 
         System.out.println("-------------- print 2 --------------");
-        print2(articleList2);
+        // print2(articleList2);
 
 
         //-------------------------user interface-------------------------------------
@@ -27,11 +27,17 @@ public class Main2 {
             System.out.println("by balance press 3");
             System.out.println("to end the programm press 0");
 
+            if (!scanner.hasNextInt()) {
+                System.out.println("please enter valid number");
+                scanner.next();
+                continue;
+            }
+
             int userChoice = scanner.nextInt();
 
-
-            if ( userChoice < 0 || userChoice > 3) {
+            if (userChoice < 0 || userChoice > 3) {
                 System.out.println("please enter valid number");
+                continue;
             }
 
 
